@@ -3,7 +3,7 @@ package Entity;
 public class User {
     private int id;
     private String username;
-    private long nationalCode;
+    private String nationalCode;
     private String birthday;
     private String password;
 
@@ -11,7 +11,7 @@ public class User {
 
     }
 
-    public User(int id, String username, long nationalCode, String birthday, String password) {
+    public User(int id, String username, String nationalCode, String birthday, String password) {
         this.id = id;
         this.username = username;
         this.nationalCode = nationalCode;
@@ -35,12 +35,15 @@ public class User {
         this.username = username;
     }
 
-    public long getNationalCode() {
+    public String getNationalCode() {
         return nationalCode;
     }
 
-    public void setNationalCode(long nationalCode) {
+    public void setNationalCode(String nationalCode) {
+        if (nationalCode.length()<11)
         this.nationalCode = nationalCode;
+        else
+            System.out.println("  error || enter correct national code");
     }
 
     public String getBirthday() {
