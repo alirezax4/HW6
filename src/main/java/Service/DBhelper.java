@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBhelper {
 
     private final static String SERVER_ADDRESS = "127.0.0.1:5432";
-    private final static String DBNAME = "HW6";
+    private final static String DBNAME = "hw6";
     private final static String USER = "alireza";
     private final static String PASSWORD = "Alix0990#";
 
