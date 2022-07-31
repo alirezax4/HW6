@@ -1,38 +1,40 @@
 package Entity;
 
 public class User {
-    private int id;
-    private String username;
-    private String nationalCode;
-    private String birthday;
+
+    private long id;
+    private String  userName;
+    private String  nationalCode;
+    private String  birthDay;
     private String password;
 
-    public User(){
+
+    public User (){
 
     }
 
-    public User(int id, String username, String nationalCode, String birthday, String password) {
+    public User(long id,String userName,String nationalCode ,String birthDay , String password) {
         this.id = id;
-        this.username = username;
         this.nationalCode = nationalCode;
-        this.birthday = birthday;
+        this.birthDay = birthDay;
+        this.userName = userName;
         this.password = password;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getNationalCode() {
@@ -40,18 +42,15 @@ public class User {
     }
 
     public void setNationalCode(String nationalCode) {
-        if (nationalCode.length()<11)
         this.nationalCode = nationalCode;
-        else
-            System.out.println("  error || enter correct national code");
     }
 
-    public String getBirthday() {
-        return birthday;
+    public String getBirthDay() {
+        return birthDay;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    public void setBirthDay(String birthDay) {
+        this.birthDay = birthDay;
     }
 
     public String getPassword() {
@@ -60,5 +59,16 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", nationalCode='" + nationalCode + '\'' +
+                ", birthDay='" + birthDay + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
